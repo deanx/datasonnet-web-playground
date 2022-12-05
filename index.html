@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>
+        DataSonnet Web Playground
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container" id="payload">
+        <textarea onkeyup="transform(document.getElementById('payloadText').value, document.getElementById('mappingText').value)" placeholder="Payload" id="payloadText"></textarea>
+        <select id="fromType">
+            <option>application/xml</option>
+            <option>application/json</option>
+            <option>application/csv</option>
+        </select>
+    </div>
+    <div class="container" id="mapping">
+        <textarea placeholder="Mapping" id="mappingText" onkeyup="transform(document.getElementById('payloadText').value, document.getElementById('mappingText').value)"></textarea>
+        <select id="toType">
+                <option>application/json</option>
+                <option>application/xml</option>
+                <option>application/csv</option>
+            </select>
+    </div>
+    <div class="container" id="resultdiv">
+        <pre id="result"></pre>
+    </div>
+
+</body>
+
+</html>
